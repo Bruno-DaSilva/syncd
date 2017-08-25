@@ -15,7 +15,7 @@ WATCH_EXCLUDE='(\.git|___jb_)'
 # Whether to enable verbosity. If enabled, change events are output.
 WATCH_VERBOSE=0
 
-# SSH connection settings
+# SSH connection settings -- if not passed it will assume local destination
 #SSH_USER=vagrant
 #SSH_HOST=hostname.local
 
@@ -28,3 +28,4 @@ RSYNC_EXCLUDE='--exclude-from /home/david/.config/exclude.list --exclude-from /h
 RSYNC_OPTIONS="-aH -x -v --delete --delete-during --delete-excluded"
 
 # log and pid files in directory of the same in jobs folder of syncd install
+# e.g. $SYNCD_DIR/jobs/PID/syncd_example.pid 

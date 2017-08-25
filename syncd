@@ -97,6 +97,9 @@ case $CMD in
     # TODO add a process name based on config file name so it can be found later
     # http://stackoverflow.com/questions/11130229/start-a-process-with-a-name
 
+    #Do initial sync
+    eval $COMMAND >> $LOGFILE
+
     $SCRIPT_DIR/watch.sh $COMMAND >> $LOGFILE &
     echo "$!" > $PIDFILE
     echo SYNCD $CONF_FILE
